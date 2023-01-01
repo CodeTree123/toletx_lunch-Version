@@ -37,7 +37,7 @@ class UpdateController extends Controller
         // photo update
         if ($request->hasFile('photo')) {
             $file = $request->file('photo');
-            $destinationPath = 'uploads/rooms/';
+            $destinationPath = 'public/uploads/rooms/';
             $filename =  "room-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename);
             $room['photo'] = $filename;
@@ -50,7 +50,7 @@ class UpdateController extends Controller
         // photo1 update
         if ($request->hasFile('photo1')) {
             $file = $request->file('photo1');
-            $destinationPath = 'uploads/rooms/';
+            $destinationPath = 'public/uploads/rooms/';
             $filename1 =  "room-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename1);
             $room['photo1'] = $filename1;
@@ -62,7 +62,7 @@ class UpdateController extends Controller
         // photo2 update
         if ($request->hasFile('photo2')) {
             $file = $request->file('photo2');
-            $destinationPath = 'uploads/rooms/';
+            $destinationPath = 'public/uploads/rooms/';
             $filename2 =  "room-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename2);
             $room['photo2'] = $filename2;
@@ -74,7 +74,7 @@ class UpdateController extends Controller
         // photo3 update
         if ($request->hasFile('photo3')) {
             $file = $request->file('photo3');
-            $destinationPath = 'uploads/rooms/';
+            $destinationPath = 'public/uploads/rooms/';
             $filename3 =  "room-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename3);
             $room['photo3'] = $filename3;
@@ -87,7 +87,7 @@ class UpdateController extends Controller
         // photo4 update
         if ($request->hasFile('photo4')) {
             $file = $request->file('photo4');
-            $destinationPath = 'uploads/rooms/';
+            $destinationPath = 'public/uploads/rooms/';
             $filename4 =  "room-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename4);
             $room['photo4'] = $filename4;
@@ -99,7 +99,7 @@ class UpdateController extends Controller
         // photo5 update
         if ($request->hasFile('photo5')) {
             $file = $request->file('photo5');
-            $destinationPath = 'uploads/rooms/';
+            $destinationPath = 'public/uploads/rooms/';
             $filename5 =  "room-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename5);
             $room['photo5'] = $filename5;
@@ -111,7 +111,7 @@ class UpdateController extends Controller
         // photo6 update
         if ($request->hasFile('photo6')) {
             $file = $request->file('photo6');
-            $destinationPath = 'uploads/rooms/';
+            $destinationPath = 'public/uploads/rooms/';
             $filename6 =  "room-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename6);
             $room['photo6'] = $filename6;
@@ -159,7 +159,7 @@ class UpdateController extends Controller
 
         if ($request->hasFile('photo')) {
             $file = $request->file('photo');
-            $destinationPath = 'uploads/flats/';
+            $destinationPath = 'public/uploads/flats/';
             $filename =  "flat-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename);
             $flat['photo'] = $filename;
@@ -171,7 +171,7 @@ class UpdateController extends Controller
         // photo1 update
         if ($request->hasFile('photo1')) {
             $file = $request->file('photo1');
-            $destinationPath = 'uploads/flats/';
+            $destinationPath = 'public/uploads/flats/';
             $filename =  "flat-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename);
             $flat['photo1'] = $filename;
@@ -183,7 +183,7 @@ class UpdateController extends Controller
         // photo2 update
         if ($request->hasFile('photo2')) {
             $file = $request->file('photo2');
-            $destinationPath = 'uploads/flats/';
+            $destinationPath = 'public/uploads/flats/';
             $filename =  "flat-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename);
             $flat['photo2'] = $filename;
@@ -195,7 +195,7 @@ class UpdateController extends Controller
         // photo3 update
         if ($request->hasFile('photo3')) {
             $file = $request->file('photo3');
-            $destinationPath = 'uploads/flats/';
+            $destinationPath = 'public/uploads/flats/';
             $filename =  "flat-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename);
             $flat['photo3'] = $filename;
@@ -207,7 +207,7 @@ class UpdateController extends Controller
         // photo4 update
         if ($request->hasFile('photo4')) {
             $file = $request->file('photo4');
-            $destinationPath = 'uploads/flats/';
+            $destinationPath = 'public/uploads/flats/';
             $filename =  "flat-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename);
             $flat['photo4'] = $filename;
@@ -219,7 +219,7 @@ class UpdateController extends Controller
         // photo5 update
         if ($request->hasFile('photo5')) {
             $file = $request->file('photo5');
-            $destinationPath = 'uploads/flats/';
+            $destinationPath = 'public/uploads/flats/';
             $filename =  "flat-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename);
             $flat['photo5'] = $filename;
@@ -231,7 +231,7 @@ class UpdateController extends Controller
         // photo6 update
         if ($request->hasFile('photo6')) {
             $file = $request->file('photo6');
-            $destinationPath = 'uploads/flats/';
+            $destinationPath = 'public/uploads/flats/';
             $filename =  "flat-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename);
             $flat['photo6'] = $filename;
@@ -281,7 +281,7 @@ class UpdateController extends Controller
         $building = Building::find($id);
         if ($request->hasFile('photo')) {
             $file = $request->file('photo');
-            $destinationPath = 'uploads/buildings/';
+            $destinationPath = 'public/uploads/buildings/';
             $filename =  "building-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename);
             $building['photo'] = $filename;
@@ -293,7 +293,7 @@ class UpdateController extends Controller
         // photo1 update
         if ($request->hasFile('photo1')) {
             $file = $request->file('photo1');
-            $destinationPath = 'uploads/buildings/';
+            $destinationPath = 'public/uploads/buildings/';
             $filename =  "building-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename);
             $building['photo1'] = $filename;
@@ -305,7 +305,7 @@ class UpdateController extends Controller
         // photo2 update
         if ($request->hasFile('photo2')) {
             $file = $request->file('photo2');
-            $destinationPath = 'uploads/buildings/';
+            $destinationPath = 'public/uploads/buildings/';
             $filename =  "building-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename);
             $building['photo2'] = $filename;
@@ -317,7 +317,7 @@ class UpdateController extends Controller
         // photo3 update
         if ($request->hasFile('photo3')) {
             $file = $request->file('photo3');
-            $destinationPath = 'uploads/buildings/';
+            $destinationPath = 'public/uploads/buildings/';
             $filename =  "building-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename);
             $building['photo3'] = $filename;
@@ -329,7 +329,7 @@ class UpdateController extends Controller
         // photo4 update
         if ($request->hasFile('photo4')) {
             $file = $request->file('photo4');
-            $destinationPath = 'uploads/buildings/';
+            $destinationPath = 'public/uploads/buildings/';
             $filename =  "building-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename);
             $building['photo4'] = $filename;
@@ -341,7 +341,7 @@ class UpdateController extends Controller
         // photo5 update
         if ($request->hasFile('photo5')) {
             $file = $request->file('photo5');
-            $destinationPath = 'uploads/buildings/';
+            $destinationPath = 'public/uploads/buildings/';
             $filename =  "building-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename);
             $building['photo5'] = $filename;
@@ -353,7 +353,7 @@ class UpdateController extends Controller
         // photo6 update
         if ($request->hasFile('photo6')) {
             $file = $request->file('photo6');
-            $destinationPath = 'uploads/buildings/';
+            $destinationPath = 'public/uploads/buildings/';
             $filename =  "building-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename);
             $building['photo6'] = $filename;
@@ -396,7 +396,7 @@ class UpdateController extends Controller
         $garage = Parking_Spot::find($id);
         if ($request->hasFile('photo')) {
             $file = $request->file('photo');
-            $destinationPath = 'uploads/garages/';
+            $destinationPath = 'public/uploads/garages/';
             $filename =  "garage-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename);
             $garage['photo'] = $filename;
@@ -408,7 +408,7 @@ class UpdateController extends Controller
         // photo1 update
         if ($request->hasFile('photo1')) {
             $file = $request->file('photo1');
-            $destinationPath = 'uploads/garages/';
+            $destinationPath = 'public/uploads/garages/';
             $filename =  "garage-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename);
             $garage['photo1'] = $filename;
@@ -420,7 +420,7 @@ class UpdateController extends Controller
         // photo2 update
         if ($request->hasFile('photo2')) {
             $file = $request->file('photo2');
-            $destinationPath = 'uploads/garages/';
+            $destinationPath = 'public/uploads/garages/';
             $filename =  "garage-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename);
             $garage['photo2'] = $filename;
@@ -432,7 +432,7 @@ class UpdateController extends Controller
         // photo3 update
         if ($request->hasFile('photo3')) {
             $file = $request->file('photo3');
-            $destinationPath = 'uploads/garages/';
+            $destinationPath = 'public/uploads/garages/';
             $filename =  "garage-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename);
             $garage['photo3'] = $filename;
@@ -444,7 +444,7 @@ class UpdateController extends Controller
         // photo4 update
         if ($request->hasFile('photo4')) {
             $file = $request->file('photo4');
-            $destinationPath = 'uploads/garages/';
+            $destinationPath = 'public/uploads/garages/';
             $filename =  "garage-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename);
             $garage['photo4'] = $filename;
@@ -456,7 +456,7 @@ class UpdateController extends Controller
         // photo5 update
         if ($request->hasFile('photo5')) {
             $file = $request->file('photo5');
-            $destinationPath = 'uploads/garages/';
+            $destinationPath = 'public/uploads/garages/';
             $filename =  "garage-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename);
             $garage['photo5'] = $filename;
@@ -468,7 +468,7 @@ class UpdateController extends Controller
         // photo6 update
         if ($request->hasFile('photo6')) {
             $file = $request->file('photo6');
-            $destinationPath = 'uploads/garages/';
+            $destinationPath = 'public/uploads/garages/';
             $filename =  "garage-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename);
             $garage['photo6'] = $filename;
@@ -500,7 +500,7 @@ class UpdateController extends Controller
         $hotel = Hotel::find($id);
         if ($request->hasFile('photo')) {
             $file = $request->file('photo');
-            $destinationPath = 'uploads/hotels/';
+            $destinationPath = 'public/uploads/hotels/';
             $filename =  "hotel-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename);
             $hotel['photo'] = $filename;
@@ -512,7 +512,7 @@ class UpdateController extends Controller
         // photo1 update
         if ($request->hasFile('photo1')) {
             $file = $request->file('photo1');
-            $destinationPath = 'uploads/hotels/';
+            $destinationPath = 'public/uploads/hotels/';
             $filename =  "hotel-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename);
             $hotel['photo1'] = $filename;
@@ -524,7 +524,7 @@ class UpdateController extends Controller
         // photo2 update
         if ($request->hasFile('photo2')) {
             $file = $request->file('photo2');
-            $destinationPath = 'uploads/hotels/';
+            $destinationPath = 'public/uploads/hotels/';
             $filename =  "hotel-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename);
             $hotel['photo2'] = $filename;
@@ -536,7 +536,7 @@ class UpdateController extends Controller
         // photo3 update
         if ($request->hasFile('photo3')) {
             $file = $request->file('photo3');
-            $destinationPath = 'uploads/hotels/';
+            $destinationPath = 'public/uploads/hotels/';
             $filename =  "hotel-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename);
             $hotel['photo3'] = $filename;
@@ -548,7 +548,7 @@ class UpdateController extends Controller
         // photo4 update
         if ($request->hasFile('photo4')) {
             $file = $request->file('photo4');
-            $destinationPath = 'uploads/hotels/';
+            $destinationPath = 'public/uploads/hotels/';
             $filename =  "hotel-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename);
             $hotel['photo4'] = $filename;
@@ -560,7 +560,7 @@ class UpdateController extends Controller
         // photo5 update
         if ($request->hasFile('photo5')) {
             $file = $request->file('photo5');
-            $destinationPath = 'uploads/hotels/';
+            $destinationPath = 'public/uploads/hotels/';
             $filename =  "hotel-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename);
             $hotel['photo5'] = $filename;
@@ -572,7 +572,7 @@ class UpdateController extends Controller
         // photo6 update
         if ($request->hasFile('photo6')) {
             $file = $request->file('photo6');
-            $destinationPath = 'uploads/hotels/';
+            $destinationPath = 'public/uploads/hotels/';
             $filename =  "hotel-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename);
             $hotel['photo6'] = $filename;
@@ -613,7 +613,7 @@ class UpdateController extends Controller
         $hostel = Hostel::find($id);
         if ($request->hasFile('photo')) {
             $file = $request->file('photo');
-            $destinationPath = 'uploads/hostels/';
+            $destinationPath = 'public/uploads/hostels/';
             $filename =  "hostel-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename);
             $hostel['photo'] = $filename;
@@ -625,7 +625,7 @@ class UpdateController extends Controller
         // photo1 update
         if ($request->hasFile('photo1')) {
             $file = $request->file('photo1');
-            $destinationPath = 'uploads/hostels/';
+            $destinationPath = 'public/uploads/hostels/';
             $filename1 =  "hostel-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename1);
             $hostel['photo1'] = $filename1;
@@ -637,7 +637,7 @@ class UpdateController extends Controller
         // photo2 update
         if ($request->hasFile('photo2')) {
             $file = $request->file('photo2');
-            $destinationPath = 'uploads/hostels/';
+            $destinationPath = 'public/uploads/hostels/';
             $filename2 =  "hostel-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename2);
             $hostel['photo2'] = $filename2;
@@ -649,7 +649,7 @@ class UpdateController extends Controller
         // photo3 update
         if ($request->hasFile('photo3')) {
             $file = $request->file('photo3');
-            $destinationPath = 'uploads/hostels/';
+            $destinationPath = 'public/uploads/hostels/';
             $filename3 =  "hostel-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename3);
             $hostel['photo3'] = $filename3;
@@ -661,7 +661,7 @@ class UpdateController extends Controller
         // photo4 update
         if ($request->hasFile('photo4')) {
             $file = $request->file('photo4');
-            $destinationPath = 'uploads/hostels/';
+            $destinationPath = 'public/uploads/hostels/';
             $filename4 =  "hostel-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename4);
             $hostel['photo4'] = $filename4;
@@ -673,7 +673,7 @@ class UpdateController extends Controller
         // photo5 update
         if ($request->hasFile('photo5')) {
             $file = $request->file('photo5');
-            $destinationPath = 'uploads/hostels/';
+            $destinationPath = 'public/uploads/hostels/';
             $filename5 =  "hostel-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename5);
             $hostel['photo5'] = $filename5;
@@ -685,7 +685,7 @@ class UpdateController extends Controller
         // photo6 update
         if ($request->hasFile('photo6')) {
             $file = $request->file('photo6');
-            $destinationPath = 'uploads/hostels/';
+            $destinationPath = 'public/uploads/hostels/';
             $filename6 =  "hostel-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename6);
             $hostel['photo6'] = $filename6;
@@ -730,7 +730,7 @@ class UpdateController extends Controller
         $restuarant = Restaurant::find($id);
         if ($request->hasFile('photo')) {
             $file = $request->file('photo');
-            $destinationPath = 'uploads/restuarants/';
+            $destinationPath = 'public/uploads/restuarants/';
             $filename =  "restuarant-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename);
             $restuarant['photo'] = $filename;
@@ -742,7 +742,7 @@ class UpdateController extends Controller
         // photo1 update
         if ($request->hasFile('photo1')) {
             $file = $request->file('photo1');
-            $destinationPath = 'uploads/restuarants/';
+            $destinationPath = 'public/uploads/restuarants/';
             $filename1 =  "restuarant-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename1);
             $restuarant['photo1'] = $filename1;
@@ -754,7 +754,7 @@ class UpdateController extends Controller
         // photo2 update
         if ($request->hasFile('photo2')) {
             $file = $request->file('photo2');
-            $destinationPath = 'uploads/restuarants/';
+            $destinationPath = 'public/uploads/restuarants/';
             $filename2 =  "restuarant-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename2);
             $restuarant['photo2'] = $filename2;
@@ -766,7 +766,7 @@ class UpdateController extends Controller
         // photo3 update
         if ($request->hasFile('photo3')) {
             $file = $request->file('photo3');
-            $destinationPath = 'uploads/restuarants/';
+            $destinationPath = 'public/uploads/restuarants/';
             $filename3 =  "restuarant-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename3);
             $restuarant['photo3'] = $filename3;
@@ -778,7 +778,7 @@ class UpdateController extends Controller
         // photo4 update
         if ($request->hasFile('photo4')) {
             $file = $request->file('photo4');
-            $destinationPath = 'uploads/restuarants/';
+            $destinationPath = 'public/uploads/restuarants/';
             $filename4 =  "restuarant-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename4);
             $restuarant['photo4'] = $filename4;
@@ -790,7 +790,7 @@ class UpdateController extends Controller
         // photo5 update
         if ($request->hasFile('photo5')) {
             $file = $request->file('photo5');
-            $destinationPath = 'uploads/restuarants/';
+            $destinationPath = 'public/uploads/restuarants/';
             $filename5 =  "restuarant-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename5);
             $restuarant['photo5'] = $filename5;
@@ -802,7 +802,7 @@ class UpdateController extends Controller
         // photo6 update
         if ($request->hasFile('photo6')) {
             $file = $request->file('photo6');
-            $destinationPath = 'uploads/restuarants/';
+            $destinationPath = 'public/uploads/restuarants/';
             $filename6 =  "restuarant-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename6);
             $restuarant['photo6'] = $filename6;
@@ -846,7 +846,7 @@ class UpdateController extends Controller
         $office = Office::find($id);
         if ($request->hasFile('photo')) {
             $file = $request->file('photo');
-            $destinationPath = 'uploads/offices/';
+            $destinationPath = 'public/uploads/offices/';
             $filename =  "office-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename);
             $office['photo'] = $filename;
@@ -858,7 +858,7 @@ class UpdateController extends Controller
         // photo1 update
         if ($request->hasFile('photo1')) {
             $file = $request->file('photo1');
-            $destinationPath = 'uploads/offices/';
+            $destinationPath = 'public/uploads/offices/';
             $filename1 =  "office-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename1);
             $office['photo1'] = $filename1;
@@ -870,7 +870,7 @@ class UpdateController extends Controller
         // photo2 update
         if ($request->hasFile('photo2')) {
             $file = $request->file('photo2');
-            $destinationPath = 'uploads/offices/';
+            $destinationPath = 'public/uploads/offices/';
             $filename2 =  "office-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename2);
             $office['photo2'] = $filename2;
@@ -882,7 +882,7 @@ class UpdateController extends Controller
         // photo3 update
         if ($request->hasFile('photo3')) {
             $file = $request->file('photo3');
-            $destinationPath = 'uploads/offices/';
+            $destinationPath = 'public/uploads/offices/';
             $filename3 =  "office-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename3);
             $office['photo3'] = $filename3;
@@ -894,7 +894,7 @@ class UpdateController extends Controller
         // photo4 update
         if ($request->hasFile('photo4')) {
             $file = $request->file('photo4');
-            $destinationPath = 'uploads/offices/';
+            $destinationPath = 'public/uploads/offices/';
             $filename4 =  "office-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename4);
             $office['photo4'] = $filename4;
@@ -906,7 +906,7 @@ class UpdateController extends Controller
         // photo5 update
         if ($request->hasFile('photo5')) {
             $file = $request->file('photo5');
-            $destinationPath = 'uploads/offices/';
+            $destinationPath = 'public/uploads/offices/';
             $filename5 =  "office-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename5);
             $office['photo5'] = $filename5;
@@ -918,7 +918,7 @@ class UpdateController extends Controller
         // photo6 update
         if ($request->hasFile('photo6')) {
             $file = $request->file('photo6');
-            $destinationPath = 'uploads/offices/';
+            $destinationPath = 'public/uploads/offices/';
             $filename6 =  "office-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename6);
             $office['photo6'] = $filename6;
@@ -960,7 +960,7 @@ class UpdateController extends Controller
         $shop = Shop::find($id);
         if ($request->hasFile('photo')) {
             $file = $request->file('photo');
-            $destinationPath = 'uploads/shops/';
+            $destinationPath = 'public/uploads/shops/';
             $filename =  "shop-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename);
             $shop['photo'] = $filename;
@@ -972,7 +972,7 @@ class UpdateController extends Controller
         // photo1 update
         if ($request->hasFile('photo1')) {
             $file = $request->file('photo1');
-            $destinationPath = 'uploads/shops/';
+            $destinationPath = 'public/uploads/shops/';
             $filename1 =  "shop-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename1);
             $shop['photo1'] = $filename1;
@@ -984,7 +984,7 @@ class UpdateController extends Controller
         // photo2 update
         if ($request->hasFile('photo2')) {
             $file = $request->file('photo2');
-            $destinationPath = 'uploads/shops/';
+            $destinationPath = 'public/uploads/shops/';
             $filename2 =  "shop-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename2);
             $shop['photo2'] = $filename2;
@@ -996,7 +996,7 @@ class UpdateController extends Controller
         // photo3 update
         if ($request->hasFile('photo3')) {
             $file = $request->file('photo3');
-            $destinationPath = 'uploads/shops/';
+            $destinationPath = 'public/uploads/shops/';
             $filename3 =  "shop-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename3);
             $shop['photo3'] = $filename3;
@@ -1008,7 +1008,7 @@ class UpdateController extends Controller
         // photo4 update
         if ($request->hasFile('photo4')) {
             $file = $request->file('photo4');
-            $destinationPath = 'uploads/shops/';
+            $destinationPath = 'public/uploads/shops/';
             $filename4 =  "shop-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename4);
             $shop['photo4'] = $filename4;
@@ -1020,7 +1020,7 @@ class UpdateController extends Controller
         // photo5 update
         if ($request->hasFile('photo5')) {
             $file = $request->file('photo5');
-            $destinationPath = 'uploads/shops/';
+            $destinationPath = 'public/uploads/shops/';
             $filename5 =  "shop-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename5);
             $shop['photo5'] = $filename5;
@@ -1032,7 +1032,7 @@ class UpdateController extends Controller
         // photo6 update
         if ($request->hasFile('photo6')) {
             $file = $request->file('photo6');
-            $destinationPath = 'uploads/shops/';
+            $destinationPath = 'public/uploads/shops/';
             $filename6 =  "shop-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename6);
             $shop['photo6'] = $filename6;
@@ -1070,7 +1070,7 @@ class UpdateController extends Controller
         $communitie = Community_Center::find($id);
         if ($request->hasFile('photo')) {
             $file = $request->file('photo');
-            $destinationPath = 'uploads/communities/';
+            $destinationPath = 'public/uploads/communities/';
             $filename =  "communitie-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename);
             $communitie['photo'] = $filename;
@@ -1082,7 +1082,7 @@ class UpdateController extends Controller
         // photo1 update
         if ($request->hasFile('photo1')) {
             $file = $request->file('photo1');
-            $destinationPath = 'uploads/communities/';
+            $destinationPath = 'public/uploads/communities/';
             $filename1 =  "communitie-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename1);
             $communitie['photo1'] = $filename1;
@@ -1094,7 +1094,7 @@ class UpdateController extends Controller
         // photo2 update
         if ($request->hasFile('photo2')) {
             $file = $request->file('photo2');
-            $destinationPath = 'uploads/communities/';
+            $destinationPath = 'public/uploads/communities/';
             $filename2 =  "communitie-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename2);
             $communitie['photo2'] = $filename2;
@@ -1106,7 +1106,7 @@ class UpdateController extends Controller
         // photo3 update
         if ($request->hasFile('photo3')) {
             $file = $request->file('photo3');
-            $destinationPath = 'uploads/communities/';
+            $destinationPath = 'public/uploads/communities/';
             $filename3 =  "communitie-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename3);
             $communitie['photo3'] = $filename3;
@@ -1118,7 +1118,7 @@ class UpdateController extends Controller
         // photo4 update
         if ($request->hasFile('photo4')) {
             $file = $request->file('photo4');
-            $destinationPath = 'uploads/communities/';
+            $destinationPath = 'public/uploads/communities/';
             $filename4 =  "communitie-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename4);
             $communitie['photo4'] = $filename4;
@@ -1130,7 +1130,7 @@ class UpdateController extends Controller
         // photo5 update
         if ($request->hasFile('photo5')) {
             $file = $request->file('photo5');
-            $destinationPath = 'uploads/communities/';
+            $destinationPath = 'public/uploads/communities/';
             $filename5 =  "communitie-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename5);
             $communitie['photo5'] = $filename5;
@@ -1142,7 +1142,7 @@ class UpdateController extends Controller
         // photo6 update
         if ($request->hasFile('photo6')) {
             $file = $request->file('photo6');
-            $destinationPath = 'uploads/communities/';
+            $destinationPath = 'public/uploads/communities/';
             $filename6 =  "communitie-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename6);
             $communitie['photo6'] = $filename6;
@@ -1180,7 +1180,7 @@ class UpdateController extends Controller
         $factorie = Factory::find($id);
         if ($request->hasFile('photo')) {
             $file = $request->file('photo');
-            $destinationPath = 'uploads/factories/';
+            $destinationPath = 'public/uploads/factories/';
             $filename =  "factorie-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename);
             $factorie['photo'] = $filename;
@@ -1192,7 +1192,7 @@ class UpdateController extends Controller
         // photo1 update
         if ($request->hasFile('photo1')) {
             $file = $request->file('photo1');
-            $destinationPath = 'uploads/factories/';
+            $destinationPath = 'public/uploads/factories/';
             $filename1 =  "factorie-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename1);
             $factorie['photo1'] = $filename1;
@@ -1204,7 +1204,7 @@ class UpdateController extends Controller
         // photo2 update
         if ($request->hasFile('photo2')) {
             $file = $request->file('photo2');
-            $destinationPath = 'uploads/factories/';
+            $destinationPath = 'public/uploads/factories/';
             $filename2 =  "factorie-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename2);
             $factorie['photo2'] = $filename2;
@@ -1216,7 +1216,7 @@ class UpdateController extends Controller
         // photo3 update
         if ($request->hasFile('photo3')) {
             $file = $request->file('photo3');
-            $destinationPath = 'uploads/factories/';
+            $destinationPath = 'public/uploads/factories/';
             $filename3 =  "factorie-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename3);
             $factorie['photo3'] = $filename3;
@@ -1228,7 +1228,7 @@ class UpdateController extends Controller
         // photo4 update
         if ($request->hasFile('photo4')) {
             $file = $request->file('photo4');
-            $destinationPath = 'uploads/factories/';
+            $destinationPath = 'public/uploads/factories/';
             $filename4 =  "factorie-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename4);
             $factorie['photo4'] = $filename4;
@@ -1240,7 +1240,7 @@ class UpdateController extends Controller
         // photo5 update
         if ($request->hasFile('photo5')) {
             $file = $request->file('photo5');
-            $destinationPath = 'uploads/factories/';
+            $destinationPath = 'public/uploads/factories/';
             $filename5 =  "factorie-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename5);
             $factorie['photo5'] = $filename5;
@@ -1252,7 +1252,7 @@ class UpdateController extends Controller
         // photo6 update
         if ($request->hasFile('photo6')) {
             $file = $request->file('photo6');
-            $destinationPath = 'uploads/factories/';
+            $destinationPath = 'public/uploads/factories/';
             $filename6 =  "factorie-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename6);
             $factorie['photo6'] = $filename6;
@@ -1293,7 +1293,7 @@ class UpdateController extends Controller
         $warehouse = Warehouse::find($id);
         if ($request->hasFile('photo')) {
             $file = $request->file('photo');
-            $destinationPath = 'uploads/warehouses/';
+            $destinationPath = 'public/uploads/warehouses/';
             $filename =  "warehouse-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename);
             $warehouse['photo'] = $filename;
@@ -1305,7 +1305,7 @@ class UpdateController extends Controller
         // photo1 update
         if ($request->hasFile('photo1')) {
             $file = $request->file('photo1');
-            $destinationPath = 'uploads/warehouses/';
+            $destinationPath = 'public/uploads/warehouses/';
             $filename1 =  "warehouse-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename1);
             $warehouse['photo1'] = $filename1;
@@ -1317,7 +1317,7 @@ class UpdateController extends Controller
         // photo2 update
         if ($request->hasFile('photo2')) {
             $file = $request->file('photo2');
-            $destinationPath = 'uploads/warehouses/';
+            $destinationPath = 'public/uploads/warehouses/';
             $filename2 =  "warehouse-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename2);
             $warehouse['photo2'] = $filename2;
@@ -1329,7 +1329,7 @@ class UpdateController extends Controller
         // photo3 update
         if ($request->hasFile('photo3')) {
             $file = $request->file('photo3');
-            $destinationPath = 'uploads/warehouses/';
+            $destinationPath = 'public/uploads/warehouses/';
             $filename3 =  "warehouse-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename3);
             $warehouse['photo3'] = $filename3;
@@ -1341,7 +1341,7 @@ class UpdateController extends Controller
         // photo4 update
         if ($request->hasFile('photo4')) {
             $file = $request->file('photo4');
-            $destinationPath = 'uploads/warehouses/';
+            $destinationPath = 'public/uploads/warehouses/';
             $filename4 =  "warehouse-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename4);
             $warehouse['photo4'] = $filename4;
@@ -1353,7 +1353,7 @@ class UpdateController extends Controller
         // photo5 update
         if ($request->hasFile('photo5')) {
             $file = $request->file('photo5');
-            $destinationPath = 'uploads/warehouses/';
+            $destinationPath = 'public/uploads/warehouses/';
             $filename5 =  "warehouse-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename5);
             $warehouse['photo5'] = $filename5;
@@ -1365,7 +1365,7 @@ class UpdateController extends Controller
         // photo6 update
         if ($request->hasFile('photo6')) {
             $file = $request->file('photo6');
-            $destinationPath = 'uploads/warehouses/';
+            $destinationPath = 'public/uploads/warehouses/';
             $filename6 =  "warehouse-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename6);
             $warehouse['photo6'] = $filename6;
@@ -1407,7 +1407,7 @@ class UpdateController extends Controller
         $pond = Pond::find($id);
         if ($request->hasFile('photo')) {
             $file = $request->file('photo');
-            $destinationPath = 'uploads/ponds/';
+            $destinationPath = 'public/uploads/ponds/';
             $filename =  "pond-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename);
             $pond['photo'] = $filename;
@@ -1419,7 +1419,7 @@ class UpdateController extends Controller
         // photo1 update
         if ($request->hasFile('photo1')) {
             $file = $request->file('photo1');
-            $destinationPath = 'uploads/ponds/';
+            $destinationPath = 'public/uploads/ponds/';
             $filename1 =  "pond-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename1);
             $pond['photo1'] = $filename1;
@@ -1431,7 +1431,7 @@ class UpdateController extends Controller
         // photo2 update
         if ($request->hasFile('photo2')) {
             $file = $request->file('photo2');
-            $destinationPath = 'uploads/ponds/';
+            $destinationPath = 'public/uploads/ponds/';
             $filename2 =  "pond-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename2);
             $pond['photo2'] = $filename2;
@@ -1443,7 +1443,7 @@ class UpdateController extends Controller
         // photo3 update
         if ($request->hasFile('photo3')) {
             $file = $request->file('photo3');
-            $destinationPath = 'uploads/ponds/';
+            $destinationPath = 'public/uploads/ponds/';
             $filename3 =  "pond-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename3);
             $pond['photo3'] = $filename3;
@@ -1455,7 +1455,7 @@ class UpdateController extends Controller
         // photo4 update
         if ($request->hasFile('photo4')) {
             $file = $request->file('photo4');
-            $destinationPath = 'uploads/ponds/';
+            $destinationPath = 'public/uploads/ponds/';
             $filename4 =  "pond-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename4);
             $pond['photo4'] = $filename4;
@@ -1467,7 +1467,7 @@ class UpdateController extends Controller
         // photo5 update
         if ($request->hasFile('photo5')) {
             $file = $request->file('photo5');
-            $destinationPath = 'uploads/ponds/';
+            $destinationPath = 'public/uploads/ponds/';
             $filename5 =  "pond-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename5);
             $pond['photo5'] = $filename5;
@@ -1479,7 +1479,7 @@ class UpdateController extends Controller
         // photo6 update
         if ($request->hasFile('photo6')) {
             $file = $request->file('photo6');
-            $destinationPath = 'uploads/ponds/';
+            $destinationPath = 'public/uploads/ponds/';
             $filename6 =  "pond-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename6);
             $pond['photo6'] = $filename6;
@@ -1516,7 +1516,7 @@ class UpdateController extends Controller
         $land = Land::find($id);
         if ($request->hasFile('photo')) {
             $file = $request->file('photo');
-            $destinationPath = 'uploads/lands/';
+            $destinationPath = 'public/uploads/lands/';
             $filename =  "land-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename);
             $land['photo'] = $filename;
@@ -1528,7 +1528,7 @@ class UpdateController extends Controller
         // photo1 update
         if ($request->hasFile('photo1')) {
             $file = $request->file('photo1');
-            $destinationPath = 'uploads/lands/';
+            $destinationPath = 'public/uploads/lands/';
             $filename1 =  "land-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename1);
             $land['photo1'] = $filename1;
@@ -1540,7 +1540,7 @@ class UpdateController extends Controller
         // photo2 update
         if ($request->hasFile('photo2')) {
             $file = $request->file('photo2');
-            $destinationPath = 'uploads/lands/';
+            $destinationPath = 'public/uploads/lands/';
             $filename2 =  "land-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename2);
             $land['photo2'] = $filename2;
@@ -1552,7 +1552,7 @@ class UpdateController extends Controller
         // photo3 update
         if ($request->hasFile('photo3')) {
             $file = $request->file('photo3');
-            $destinationPath = 'uploads/lands/';
+            $destinationPath = 'public/uploads/lands/';
             $filename3 =  "land-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename3);
             $land['photo3'] = $filename3;
@@ -1564,7 +1564,7 @@ class UpdateController extends Controller
         // photo4 update
         if ($request->hasFile('photo4')) {
             $file = $request->file('photo4');
-            $destinationPath = 'uploads/lands/';
+            $destinationPath = 'public/uploads/lands/';
             $filename4 =  "land-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename4);
             $land['photo4'] = $filename4;
@@ -1576,7 +1576,7 @@ class UpdateController extends Controller
         // photo5 update
         if ($request->hasFile('photo5')) {
             $file = $request->file('photo5');
-            $destinationPath = 'uploads/lands/';
+            $destinationPath = 'public/uploads/lands/';
             $filename5 =  "land-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename5);
             $land['photo5'] = $filename5;
@@ -1588,7 +1588,7 @@ class UpdateController extends Controller
         // photo6 update
         if ($request->hasFile('photo6')) {
             $file = $request->file('photo6');
-            $destinationPath = 'uploads/lands/';
+            $destinationPath = 'public/uploads/lands/';
             $filename6 =  "land-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename6);
             $land['photo6'] = $filename6;
@@ -1625,7 +1625,7 @@ class UpdateController extends Controller
         $ghat = Ghat::find($id);
         if ($request->hasFile('photo')) {
             $file = $request->file('photo');
-            $destinationPath = 'uploads/ghats/';
+            $destinationPath = 'public/uploads/ghats/';
             $filename =  "ghat-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename);
             $ghat['photo'] = $filename;
@@ -1637,7 +1637,7 @@ class UpdateController extends Controller
         // photo1 update
         if ($request->hasFile('photo1')) {
             $file = $request->file('photo1');
-            $destinationPath = 'uploads/ghats/';
+            $destinationPath = 'public/uploads/ghats/';
             $filename1 =  "ghat-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename1);
             $ghat['photo1'] = $filename1;
@@ -1649,7 +1649,7 @@ class UpdateController extends Controller
         // photo2 update
         if ($request->hasFile('photo2')) {
             $file = $request->file('photo2');
-            $destinationPath = 'uploads/ghats/';
+            $destinationPath = 'public/uploads/ghats/';
             $filename2 =  "ghat-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename2);
             $ghat['photo2'] = $filename2;
@@ -1661,7 +1661,7 @@ class UpdateController extends Controller
         // photo3 update
         if ($request->hasFile('photo3')) {
             $file = $request->file('photo3');
-            $destinationPath = 'uploads/ghats/';
+            $destinationPath = 'public/uploads/ghats/';
             $filename3 =  "ghat-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename3);
             $ghat['photo3'] = $filename3;
@@ -1673,7 +1673,7 @@ class UpdateController extends Controller
         // photo4 update
         if ($request->hasFile('photo4')) {
             $file = $request->file('photo4');
-            $destinationPath = 'uploads/ghats/';
+            $destinationPath = 'public/uploads/ghats/';
             $filename4 =  "ghat-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename4);
             $ghat['photo4'] = $filename4;
@@ -1685,7 +1685,7 @@ class UpdateController extends Controller
         // photo5 update
         if ($request->hasFile('photo5')) {
             $file = $request->file('photo5');
-            $destinationPath = 'uploads/ghats/';
+            $destinationPath = 'public/uploads/ghats/';
             $filename5 =  "ghat-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename5);
             $ghat['photo5'] = $filename5;
@@ -1697,7 +1697,7 @@ class UpdateController extends Controller
         // photo6 update
         if ($request->hasFile('photo6')) {
             $file = $request->file('photo6');
-            $destinationPath = 'uploads/ghats/';
+            $destinationPath = 'public/uploads/ghats/';
             $filename6 =  "ghat-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename6);
             $ghat['photo6'] = $filename6;
@@ -1728,7 +1728,7 @@ class UpdateController extends Controller
         $swimmingpool = Swimming_Pool::find($id);
         if ($request->hasFile('photo')) {
             $file = $request->file('photo');
-            $destinationPath = 'uploads/swimmingpools/';
+            $destinationPath = 'public/uploads/swimmingpools/';
             $filename =  "swimmingpool-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename);
             $swimmingpool['photo'] = $filename;
@@ -1740,7 +1740,7 @@ class UpdateController extends Controller
         // photo1 update
         if ($request->hasFile('photo1')) {
             $file = $request->file('photo1');
-            $destinationPath = 'uploads/swimmingpools/';
+            $destinationPath = 'public/uploads/swimmingpools/';
             $filename1 =  "swimmingpool-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename1);
             $swimmingpool['photo1'] = $filename1;
@@ -1752,7 +1752,7 @@ class UpdateController extends Controller
         // photo2 update
         if ($request->hasFile('photo2')) {
             $file = $request->file('photo2');
-            $destinationPath = 'uploads/swimmingpools/';
+            $destinationPath = 'public/uploads/swimmingpools/';
             $filename2 =  "swimmingpool-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename2);
             $swimmingpool['photo2'] = $filename2;
@@ -1764,7 +1764,7 @@ class UpdateController extends Controller
         // photo3 update
         if ($request->hasFile('photo3')) {
             $file = $request->file('photo3');
-            $destinationPath = 'uploads/swimmingpools/';
+            $destinationPath = 'public/uploads/swimmingpools/';
             $filename3 =  "swimmingpool-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename3);
             $swimmingpool['photo3'] = $filename3;
@@ -1776,7 +1776,7 @@ class UpdateController extends Controller
         // photo4 update
         if ($request->hasFile('photo4')) {
             $file = $request->file('photo4');
-            $destinationPath = 'uploads/swimmingpools/';
+            $destinationPath = 'public/uploads/swimmingpools/';
             $filename4 =  "swimmingpool-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename4);
             $swimmingpool['photo4'] = $filename4;
@@ -1788,7 +1788,7 @@ class UpdateController extends Controller
         // photo5 update
         if ($request->hasFile('photo5')) {
             $file = $request->file('photo5');
-            $destinationPath = 'uploads/swimmingpools/';
+            $destinationPath = 'public/uploads/swimmingpools/';
             $filename5 =  "swimmingpool-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename5);
             $swimmingpool['photo5'] = $filename5;
@@ -1800,7 +1800,7 @@ class UpdateController extends Controller
         // photo6 update
         if ($request->hasFile('photo6')) {
             $file = $request->file('photo6');
-            $destinationPath = 'uploads/swimmingpools/';
+            $destinationPath = 'public/uploads/swimmingpools/';
             $filename6 =  "swimmingpool-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename6);
             $swimmingpool['photo6'] = $filename6;
@@ -1838,7 +1838,7 @@ class UpdateController extends Controller
         $playground = Play_ground::find($id);
         if ($request->hasFile('photo')) {
             $file = $request->file('photo');
-            $destinationPath = 'uploads/playgrounds/';
+            $destinationPath = 'public/uploads/playgrounds/';
             $filename =  "playground-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename);
             $playground['photo'] = $filename;
@@ -1850,7 +1850,7 @@ class UpdateController extends Controller
         // photo1 update
         if ($request->hasFile('photo1')) {
             $file = $request->file('photo1');
-            $destinationPath = 'uploads/playgrounds/';
+            $destinationPath = 'public/uploads/playgrounds/';
             $filename1 =  "playground-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename1);
             $playground['photo1'] = $filename1;
@@ -1862,7 +1862,7 @@ class UpdateController extends Controller
         // photo2 update
         if ($request->hasFile('photo2')) {
             $file = $request->file('photo2');
-            $destinationPath = 'uploads/playgrounds/';
+            $destinationPath = 'public/uploads/playgrounds/';
             $filename2 =  "playground-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename2);
             $playground['photo2'] = $filename2;
@@ -1874,7 +1874,7 @@ class UpdateController extends Controller
         // photo3 update
         if ($request->hasFile('photo3')) {
             $file = $request->file('photo3');
-            $destinationPath = 'uploads/playgrounds/';
+            $destinationPath = 'public/uploads/playgrounds/';
             $filename3 =  "playground-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename3);
             $playground['photo3'] = $filename3;
@@ -1886,7 +1886,7 @@ class UpdateController extends Controller
         // photo4 update
         if ($request->hasFile('photo4')) {
             $file = $request->file('photo4');
-            $destinationPath = 'uploads/playgrounds/';
+            $destinationPath = 'public/uploads/playgrounds/';
             $filename4 =  "playground-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename4);
             $playground['photo4'] = $filename4;
@@ -1898,7 +1898,7 @@ class UpdateController extends Controller
         // photo5 update
         if ($request->hasFile('photo5')) {
             $file = $request->file('photo5');
-            $destinationPath = 'uploads/playgrounds/';
+            $destinationPath = 'public/uploads/playgrounds/';
             $filename5 =  "playground-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename5);
             $playground['photo5'] = $filename5;
@@ -1910,7 +1910,7 @@ class UpdateController extends Controller
         // photo6 update
         if ($request->hasFile('photo6')) {
             $file = $request->file('photo6');
-            $destinationPath = 'uploads/playgrounds/';
+            $destinationPath = 'public/uploads/playgrounds/';
             $filename6 =  "playground-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename6);
             $playground['photo6'] = $filename6;
@@ -1946,7 +1946,7 @@ class UpdateController extends Controller
         $shooting = Shooting_Spot::find($id);
         if ($request->hasFile('photo')) {
             $file = $request->file('photo');
-            $destinationPath = 'uploads/shootings/';
+            $destinationPath = 'public/uploads/shootings/';
             $filename =  "shooting-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename);
             $shooting['photo'] = $filename;
@@ -1958,7 +1958,7 @@ class UpdateController extends Controller
         // photo1 update
         if ($request->hasFile('photo1')) {
             $file = $request->file('photo1');
-            $destinationPath = 'uploads/shootings/';
+            $destinationPath = 'public/uploads/shootings/';
             $filename1 =  "shooting-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename1);
             $shooting['photo1'] = $filename1;
@@ -1970,7 +1970,7 @@ class UpdateController extends Controller
         // photo2 update
         if ($request->hasFile('photo2')) {
             $file = $request->file('photo2');
-            $destinationPath = 'uploads/shootings/';
+            $destinationPath = 'public/uploads/shootings/';
             $filename2 =  "shooting-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename2);
             $shooting['photo2'] = $filename2;
@@ -1982,7 +1982,7 @@ class UpdateController extends Controller
         // photo3 update
         if ($request->hasFile('photo3')) {
             $file = $request->file('photo3');
-            $destinationPath = 'uploads/shootings/';
+            $destinationPath = 'public/uploads/shootings/';
             $filename3 =  "shooting-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename3);
             $shooting['photo3'] = $filename3;
@@ -1994,7 +1994,7 @@ class UpdateController extends Controller
         // photo4 update
         if ($request->hasFile('photo4')) {
             $file = $request->file('photo4');
-            $destinationPath = 'uploads/shootings/';
+            $destinationPath = 'public/uploads/shootings/';
             $filename4 =  "shooting-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename4);
             $shooting['photo4'] = $filename4;
@@ -2006,7 +2006,7 @@ class UpdateController extends Controller
         // photo5 update
         if ($request->hasFile('photo5')) {
             $file = $request->file('photo5');
-            $destinationPath = 'uploads/shootings/';
+            $destinationPath = 'public/uploads/shootings/';
             $filename5 =  "shooting-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename5);
             $shooting['photo5'] = $filename5;
@@ -2018,7 +2018,7 @@ class UpdateController extends Controller
         // photo6 update
         if ($request->hasFile('photo6')) {
             $file = $request->file('photo6');
-            $destinationPath = 'uploads/shootings/';
+            $destinationPath = 'public/uploads/shootings/';
             $filename6 =  "shooting-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename6);
             $shooting['photo6'] = $filename6;
@@ -2057,7 +2057,7 @@ class UpdateController extends Controller
         $picnic = Picnic_Spot::find($id);
         if ($request->hasFile('photo')) {
             $file = $request->file('photo');
-            $destinationPath = 'uploads/picnics/';
+            $destinationPath = 'public/uploads/picnics/';
             $filename =  "picnic-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename);
             $picnic['photo'] = $filename;
@@ -2069,7 +2069,7 @@ class UpdateController extends Controller
         // photo1 update
         if ($request->hasFile('photo1')) {
             $file = $request->file('photo1');
-            $destinationPath = 'uploads/picnics/';
+            $destinationPath = 'public/uploads/picnics/';
             $filename1 =  "picnic-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename1);
             $picnic['photo1'] = $filename1;
@@ -2081,7 +2081,7 @@ class UpdateController extends Controller
         // photo2 update
         if ($request->hasFile('photo2')) {
             $file = $request->file('photo2');
-            $destinationPath = 'uploads/picnics/';
+            $destinationPath = 'public/uploads/picnics/';
             $filename2 =  "picnic-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename2);
             $picnic['photo2'] = $filename2;
@@ -2093,7 +2093,7 @@ class UpdateController extends Controller
         // photo3 update
         if ($request->hasFile('photo3')) {
             $file = $request->file('photo3');
-            $destinationPath = 'uploads/picnics/';
+            $destinationPath = 'public/uploads/picnics/';
             $filename3 =  "picnic-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename3);
             $picnic['photo3'] = $filename3;
@@ -2105,7 +2105,7 @@ class UpdateController extends Controller
         // photo4 update
         if ($request->hasFile('photo4')) {
             $file = $request->file('photo4');
-            $destinationPath = 'uploads/picnics/';
+            $destinationPath = 'public/uploads/picnics/';
             $filename4 =  "picnic-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename4);
             $picnic['photo4'] = $filename4;
@@ -2117,7 +2117,7 @@ class UpdateController extends Controller
         // photo5 update
         if ($request->hasFile('photo5')) {
             $file = $request->file('photo5');
-            $destinationPath = 'uploads/picnics/';
+            $destinationPath = 'public/uploads/picnics/';
             $filename5 =  "picnic-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename5);
             $picnic['photo5'] = $filename5;
@@ -2129,7 +2129,7 @@ class UpdateController extends Controller
         // photo6 update
         if ($request->hasFile('photo6')) {
             $file = $request->file('photo6');
-            $destinationPath = 'uploads/picnics/';
+            $destinationPath = 'public/uploads/picnics/';
             $filename6 =  "picnic-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename6);
             $picnic['photo6'] = $filename6;
@@ -2167,7 +2167,7 @@ class UpdateController extends Controller
         $exhibution = Exibution_Center::find($id);
         if ($request->hasFile('photo')) {
             $file = $request->file('photo');
-            $destinationPath = 'uploads/exhibutions/';
+            $destinationPath = 'public/uploads/exhibutions/';
             $filename =  "exhibution-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename);
             $exhibution['photo'] = $filename;
@@ -2179,7 +2179,7 @@ class UpdateController extends Controller
         // photo1 update
         if ($request->hasFile('photo1')) {
             $file = $request->file('photo1');
-            $destinationPath = 'uploads/exhibutions/';
+            $destinationPath = 'public/uploads/exhibutions/';
             $filename1 =  "exhibution-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename1);
             $exhibution['photo1'] = $filename1;
@@ -2191,7 +2191,7 @@ class UpdateController extends Controller
         // photo2 update
         if ($request->hasFile('photo2')) {
             $file = $request->file('photo2');
-            $destinationPath = 'uploads/exhibutions/';
+            $destinationPath = 'public/uploads/exhibutions/';
             $filename2 =  "exhibution-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename2);
             $exhibution['photo2'] = $filename2;
@@ -2203,7 +2203,7 @@ class UpdateController extends Controller
         // photo3 update
         if ($request->hasFile('photo3')) {
             $file = $request->file('photo3');
-            $destinationPath = 'uploads/exhibutions/';
+            $destinationPath = 'public/uploads/exhibutions/';
             $filename3 =  "exhibution-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename3);
             $exhibution['photo3'] = $filename3;
@@ -2215,7 +2215,7 @@ class UpdateController extends Controller
         // photo4 update
         if ($request->hasFile('photo4')) {
             $file = $request->file('photo4');
-            $destinationPath = 'uploads/exhibutions/';
+            $destinationPath = 'public/uploads/exhibutions/';
             $filename4 =  "exhibution-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename4);
             $exhibution['photo4'] = $filename4;
@@ -2227,7 +2227,7 @@ class UpdateController extends Controller
         // photo5 update
         if ($request->hasFile('photo5')) {
             $file = $request->file('photo5');
-            $destinationPath = 'uploads/exhibutions/';
+            $destinationPath = 'public/uploads/exhibutions/';
             $filename5 =  "exhibution-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename5);
             $exhibution['photo5'] = $filename5;
@@ -2239,7 +2239,7 @@ class UpdateController extends Controller
         // photo6 update
         if ($request->hasFile('photo6')) {
             $file = $request->file('photo6');
-            $destinationPath = 'uploads/exhibutions/';
+            $destinationPath = 'public/uploads/exhibutions/';
             $filename6 =  "exhibution-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename6);
             $exhibution['photo6'] = $filename6;
@@ -2277,7 +2277,7 @@ class UpdateController extends Controller
         $rooftop = Rooftop::find($id);
         if ($request->hasFile('photo')) {
             $file = $request->file('photo');
-            $destinationPath = 'uploads/rooftops/';
+            $destinationPath = 'public/uploads/rooftops/';
             $filename =  "rooftop-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename);
             $rooftop['photo'] = $filename;
@@ -2289,7 +2289,7 @@ class UpdateController extends Controller
         // photo1 update
         if ($request->hasFile('photo1')) {
             $file = $request->file('photo1');
-            $destinationPath = 'uploads/rooftops/';
+            $destinationPath = 'public/uploads/rooftops/';
             $filename1 =  "rooftop-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename1);
             $rooftop['photo1'] = $filename1;
@@ -2301,7 +2301,7 @@ class UpdateController extends Controller
         // photo2 update
         if ($request->hasFile('photo2')) {
             $file = $request->file('photo2');
-            $destinationPath = 'uploads/rooftops/';
+            $destinationPath = 'public/uploads/rooftops/';
             $filename2 =  "rooftop-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename2);
             $rooftop['photo2'] = $filename2;
@@ -2313,7 +2313,7 @@ class UpdateController extends Controller
         // photo3 update
         if ($request->hasFile('photo3')) {
             $file = $request->file('photo3');
-            $destinationPath = 'uploads/rooftops/';
+            $destinationPath = 'public/uploads/rooftops/';
             $filename3 =  "rooftop-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename3);
             $rooftop['photo3'] = $filename3;
@@ -2325,7 +2325,7 @@ class UpdateController extends Controller
         // photo4 update
         if ($request->hasFile('photo4')) {
             $file = $request->file('photo4');
-            $destinationPath = 'uploads/rooftops/';
+            $destinationPath = 'public/uploads/rooftops/';
             $filename4 =  "rooftop-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename4);
             $rooftop['photo4'] = $filename4;
@@ -2337,7 +2337,7 @@ class UpdateController extends Controller
         // photo5 update
         if ($request->hasFile('photo5')) {
             $file = $request->file('photo5');
-            $destinationPath = 'uploads/rooftops/';
+            $destinationPath = 'public/uploads/rooftops/';
             $filename5 =  "rooftop-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename5);
             $rooftop['photo5'] = $filename5;
@@ -2349,7 +2349,7 @@ class UpdateController extends Controller
         // photo6 update
         if ($request->hasFile('photo6')) {
             $file = $request->file('photo6');
-            $destinationPath = 'uploads/rooftops/';
+            $destinationPath = 'public/uploads/rooftops/';
             $filename6 =  "rooftop-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename6);
             $rooftop['photo6'] = $filename6;
@@ -2385,7 +2385,7 @@ class UpdateController extends Controller
         $bilboard = Bilboard::find($id);
         if ($request->hasFile('photo')) {
             $file = $request->file('photo');
-            $destinationPath = 'uploads/bilboards/';
+            $destinationPath = 'public/uploads/bilboards/';
             $filename =  "bilboard-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename);
             $bilboard['photo'] = $filename;
@@ -2397,7 +2397,7 @@ class UpdateController extends Controller
         // photo1 update
         if ($request->hasFile('photo1')) {
             $file = $request->file('photo1');
-            $destinationPath = 'uploads/bilboards/';
+            $destinationPath = 'public/uploads/bilboards/';
             $filename1 =  "bilboard-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename1);
             $bilboard['photo1'] = $filename1;
@@ -2409,7 +2409,7 @@ class UpdateController extends Controller
         // photo2 update
         if ($request->hasFile('photo2')) {
             $file = $request->file('photo2');
-            $destinationPath = 'uploads/bilboards/';
+            $destinationPath = 'public/uploads/bilboards/';
             $filename2 =  "bilboard-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename2);
             $bilboard['photo2'] = $filename2;
@@ -2421,7 +2421,7 @@ class UpdateController extends Controller
         // photo3 update
         if ($request->hasFile('photo3')) {
             $file = $request->file('photo3');
-            $destinationPath = 'uploads/bilboards/';
+            $destinationPath = 'public/uploads/bilboards/';
             $filename3 =  "bilboard-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename3);
             $bilboard['photo3'] = $filename3;
@@ -2433,7 +2433,7 @@ class UpdateController extends Controller
         // photo4 update
         if ($request->hasFile('photo4')) {
             $file = $request->file('photo4');
-            $destinationPath = 'uploads/bilboards/';
+            $destinationPath = 'public/uploads/bilboards/';
             $filename4 =  "bilboard-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename4);
             $bilboard['photo4'] = $filename4;
@@ -2445,7 +2445,7 @@ class UpdateController extends Controller
         // photo5 update
         if ($request->hasFile('photo5')) {
             $file = $request->file('photo5');
-            $destinationPath = 'uploads/bilboards/';
+            $destinationPath = 'public/uploads/bilboards/';
             $filename5 =  "bilboard-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename5);
             $bilboard['photo5'] = $filename5;
@@ -2457,7 +2457,7 @@ class UpdateController extends Controller
         // photo6 update
         if ($request->hasFile('photo6')) {
             $file = $request->file('photo6');
-            $destinationPath = 'uploads/bilboards/';
+            $destinationPath = 'public/uploads/bilboards/';
             $filename6 =  "bilboard-" . date('YmdHis') . "." . $file->getClientOriginalExtension();
             $file->move($destinationPath, $filename6);
             $bilboard['photo6'] = $filename6;
