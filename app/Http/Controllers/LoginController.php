@@ -40,6 +40,7 @@ class LoginController extends Controller
     function send_sms($phone, $otp)
     {
         $url = "http://202.164.208.226/smsapi";
+
         $data = [
             "api_key" => "C20013386235902a575991.44900461",
             "type" => "text",

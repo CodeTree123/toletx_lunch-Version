@@ -48,7 +48,7 @@
                         <div class=" col-4 mb-3">
                             <label for="level_Rent" class="form-label me-2 fw-bold">Floor Level</label>
                             <select id="level_Rent" class="form-select" name="floor_level" required>
-                                <option value="" >Choose...</option>
+                                <option value="">Choose...</option>
                                 <option value="1" {{$list->floor_level == "1" ? 'selected':''}}>1</option>
                                 <option value="2" {{$list->floor_level == "2" ? 'selected':''}}>2</option>
                                 <option value="Under Ground" {{$list->floor_level == "Under Ground" ? 'selected':''}}>Under Ground</option>
@@ -57,7 +57,7 @@
                         <div class=" col-4 mb-3">
                             <label for="floor_height_Rent" class="form-label me-2 fw-bold">Floor Hieght</label>
                             <select id="" class="form-select" name="floor_height" required>
-                                <option value="" >Choose...</option>
+                                <option value="">Choose...</option>
                                 <option value="13" {{$list->floor_height == "13" ? 'selected':''}}>13</option>
                                 <option value="14" {{$list->floor_height == "14" ? 'selected':''}}>14</option>
                                 <option value="17" {{$list->floor_height == "17" ? 'selected':''}}>17</option>
@@ -67,10 +67,10 @@
                         <div class=" col-4 mb-3">
                             <label for="vehicle_type_Rent" class="form-label me-2 fw-bold">Vehicle type</label>
                             <select id="vehicle_type_Rent" class="form-select" name="vehicle_type" required>
-                                <option value="" >Choose...</option>
+                                <option value="">Choose...</option>
                                 <option value="Truck" {{$list->vehicle_type == "Truck" ? 'selected':''}}>ck</option>
-                                <option value="Motor bike"{{$list->vehicle_type == "Motor bike" ? 'selected':''}}>Motor bike</option>
-                                <option value="Pickup"{{$list->vehicle_type == "Pickup" ? 'selected':''}}>Pickup</option>
+                                <option value="Motor bike" {{$list->vehicle_type == "Motor bike" ? 'selected':''}}>Motor bike</option>
+                                <option value="Pickup" {{$list->vehicle_type == "Pickup" ? 'selected':''}}>Pickup</option>
                                 <option value="Privet car" {{$list->vehicle_type == "Privet car" ? 'selected':''}}>Privet car</option>
                             </select>
                         </div>
@@ -82,99 +82,123 @@
                             <label for="description_Rent" class="form-label me-2 fw-bold">Description</label>
                             <textarea name="description" type="text" class="form-control" id="description_Rent" rows="3" placeholder="Enter Description">{{$list->description}}</textarea>
                         </div>
-
-
+                    </div>
+                    <div class="col-8">
                         <h2 class="fw-bold mb-3">Gallery Section</h2>
                         <div class="row">
                             <div class="col">
-                                @if($list->photo == 'null')
-                                <img id="blah" alt="your image" width="300" height="300" />
+
+                                @if($list->photo == '')
+                                <img src="{{asset('/Frontend/assets/img/th.webp')}}" alt="" srcset="" width="300" height="300">
+                                <div class=" input-group mt-2">
+                                    <input type="file" class="form-control " name="photo" id="photo_Rent" placeholder="asd" onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])">
+                                </div>
                                 @else
                                 <img src="{{asset('public/uploads/garages/'.$list->photo)}}" alt="" srcset="" width="300" height="300">
-                                @endif
-                                <label for="photo_Rent" class="d-block"> Main Image</label>
-                                <div class="input-group  ">
+                                <div class="input-group mt-2">
                                     <input type="file" class="form-control" name="photo" id="photo_Rent" placeholder="asd" onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])">
                                 </div>
+                                <a href="{{route('image_delete',['Parking_Spot',$list->id,'garages','photo',$list->photo])}}" class="btn btn-primary"><i class="fa-solid fa-trash-can"></i></a>
+                                @endif
+
+                                <label for="photo_Rent" class="d-block"> Main Image</label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-4">
-                                @if($list->photo1 == 'null')
-                                <img id="blah1" alt="your image" class="my-3" width="200" height="200" />
+                                @if($list->photo1 == '')
+                                <img src="{{asset('/Frontend/assets/img/th.webp')}}" alt="" srcset="" width="300" height="300">
+                                <div class=" input-group mt-2">
+                                    <input type="file" class="form-control " name="photo1" id="photo_Rent" placeholder="asd" onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])">
+                                </div>
                                 @else
-                                <img src="{{asset('public/uploads/garages/'.$list->photo1)}}" class="my-3" srcset="" width="200" height="200">
+                                <img src="{{asset('public/uploads/garages/'.$list->photo1)}}" alt="" srcset="" width="300" height="300">
+                                <div class="input-group mt-2">
+                                    <input type="file" class="form-control" name="photo1" id="photo_Rent" placeholder="asd" onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])">
+                                </div>
+                                <a href="{{route('image_delete',['Parking_Spot',$list->id,'garages','photo1',$list->photo1])}}" class="btn btn-primary"><i class="fa-solid fa-trash-can"></i></a>
                                 @endif
                                 <label for="photo1_Rent" class="d-block "> Photo 2</label>
-                                <div class="input-group ">
-                                    <input type="file" class="form-control" name="photo1" id="photo1_Rent" onchange="document.getElementById('blah1').src = window.URL.createObjectURL(this.files[0])">
-                                </div>
                             </div>
                             <div class="col-4">
-                                @if($list->photo2 == 'null')
-                                <img id="blah2" alt="your image" class="my-3" width="200" height="200" />
+                                @if($list->photo2 == '')
+                                <img src="{{asset('/Frontend/assets/img/th.webp')}}" alt="" srcset="" width="300" height="300">
+                                <div class=" input-group mt-2">
+                                    <input type="file" class="form-control " name="photo2" id="photo_Rent" placeholder="asd" onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])">
+                                </div>
                                 @else
-                                <img src="{{asset('public/uploads/garages/'.$list->photo2)}}" class="my-3" srcset="" width="200" height="200">
+                                <img src="{{asset('public/uploads/garages/'.$list->photo2)}}" alt="" srcset="" width="300" height="300">
+                                <div class="input-group mt-2">
+                                    <input type="file" class="form-control" name="photo2" id="photo_Rent" placeholder="asd" onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])">
+                                </div>
+                                <a href="{{route('image_delete',['Parking_Spot',$list->id,'garages','photo2',$list->photo2])}}" class="btn btn-primary"><i class="fa-solid fa-trash-can"></i></a>
                                 @endif
                                 <label for="photo2_Rent" class="d-block"> Photo 3</label>
-                                <div class="input-group mb-3">
-                                    <input type="file" class="form-control" name="photo2" id="photo2_Rent" onchange="document.getElementById('blah2').src = window.URL.createObjectURL(this.files[0])">
-                                </div>
-                            </div>
-                            <div class="col-4">
-                                @if($list->photo3 == 'null')
-                                <img id="blah" alt="your image" width="200" height="200" />
-                                @else
-                                <img src="{{asset('public/uploads/garages/'.$list->photo3)}}"  class="my-3" alt="" srcset="" width="200" height="200">
-                                @endif
-                                <label for="photo3_Rent" class="d-block"> Photo 4</label>
-                                <div class="input-group mb-3">
-                                    <input type="file" class="form-control" name="photo3" id="photo3_Rent" onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])">
-                                </div>
-                            </div>
-                            <div class="col-4">
-                                @if($list->photo4 == 'null')
-                                <img id="blah4" alt="your image" width="200" height="200" />
-                                @else
-                                <img src="{{asset('public/uploads/garages/'.$list->photo4)}}"  class="my-3" alt="" srcset="" width="200" height="200">
-                                @endif
-                                <label for="photo4_Rent" class="d-block"> Photo 5</label>
 
-                                <div class="input-group mb-3">
-                                    <input type="file" class="form-control" name="photo4" id="photo4_Rent" onchange="document.getElementById('blah4').src = window.URL.createObjectURL(this.files[0])">
-                                </div>
                             </div>
                             <div class="col-4">
-                                @if($list->photo5 == 'null')
-                                <img id="blah5" alt="your image" width="200" height="200" />
-                                @else
-                                <img src="{{asset('public/uploads/garages/'.$list->photo5)}}"  class="my-3" alt="" srcset="" width="200" height="200">
-                                @endif
-                                <label for="photo5_Rent" class="d-block"> Photo 6</label>
-
-                                <div class="input-group mb-3">
-                                    <input type="file" class="form-control" name="photo5" id="photo5_Rent" onchange="document.getElementById('blah5').src = window.URL.createObjectURL(this.files[0])">
+                                @if($list->photo3 == '')
+                                <img src="{{asset('/Frontend/assets/img/th.webp')}}" alt="" srcset="" width="300" height="300">
+                                <div class=" input-group mt-2">
+                                    <input type="file" class="form-control " name="photo3" id="photo_Rent" placeholder="asd" onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])">
                                 </div>
+                                @else
+                                <img src="{{asset('public/uploads/garages/'.$list->photo3)}}" alt="" srcset="" width="300" height="300">
+                                <div class="input-group mt-2">
+                                    <input type="file" class="form-control" name="photo3" id="photo_Rent" placeholder="asd" onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])">
+                                </div>
+                                <a href="{{route('image_delete',['Parking_Spot',$list->id,'garages','photo3',$list->photo3])}}" class="btn btn-primary"><i class="fa-solid fa-trash-can"></i></a>
+                                @endif
+                                <label for="photo2_Rent" class="d-block"> Photo 4</label>
                             </div>
                             <div class="col-4">
-                                @if($list->photo6 == 'null')
-                                <img id="blah6" alt="your image" width="200" height="200" />
-                                @else
-                                <img src="{{asset('public/uploads/garages/'.$list->photo6)}}"  class="my-3" width="200" height="200">
-                                @endif
-                                <label for="photo6_Rent" class="d-block"> Photo 7</label>
-
-                                <div class="input-group ">
-                                    <input type="file" class="form-control" name="photo6" id="photo6_Rent" onchange="document.getElementById('blah6').src = window.URL.createObjectURL(this.files[0])">
+                                @if($list->photo4 == '')
+                                <img src="{{asset('/Frontend/assets/img/th.webp')}}" alt="" srcset="" width="300" height="300">
+                                <div class=" input-group mt-2">
+                                    <input type="file" class="form-control " name="photo4" id="photo_Rent" placeholder="asd" onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])">
                                 </div>
+                                @else
+                                <img src="{{asset('public/uploads/garages/'.$list->photo4)}}" alt="" srcset="" width="300" height="300">
+                                <div class="input-group mt-2">
+                                    <input type="file" class="form-control" name="photo4" id="photo_Rent" placeholder="asd" onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])">
+                                </div>
+                                <a href="{{route('image_delete',['Parking_Spot',$list->id,'garages','photo4',$list->photo4])}}" class="btn btn-primary"><i class="fa-solid fa-trash-can"></i></a>
+                                @endif
+                                <label for="photo2_Rent" class="d-block"> Photo 5</label>
+                            </div>
+                            <div class="col-4">
+                                @if($list->photo5 == '')
+                                <img src="{{asset('/Frontend/assets/img/th.webp')}}" alt="" srcset="" width="300" height="300">
+                                <div class=" input-group mt-2">
+                                    <input type="file" class="form-control " name="photo5" id="photo_Rent" placeholder="asd" onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])">
+                                </div>
+                                @else
+                                <img src="{{asset('public/uploads/garages/'.$list->photo5)}}" alt="" srcset="" width="300" height="300">
+                                <div class="input-group mt-2">
+                                    <input type="file" class="form-control" name="photo5" id="photo_Rent" placeholder="asd" onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])">
+                                </div>
+                                <a href="{{route('image_delete',['Parking_Spot',$list->id,'garages','photo5',$list->photo5])}}" class="btn btn-primary"><i class="fa-solid fa-trash-can"></i></a>
+                                @endif
+                                <label for="photo2_Rent" class="d-block"> Photo 6</label>
+                            </div>
+                            <div class="col-4">
+                                @if($list->photo6 == '')
+                                <img src="{{asset('/Frontend/assets/img/th.webp')}}" alt="" srcset="" width="300" height="300">
+                                <div class=" input-group mt-2">
+                                    <input type="file" class="form-control " name="photo6" id="photo_Rent" placeholder="asd" onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])">
+                                </div>
+                                @else
+                                <img src="{{asset('public/uploads/garages/'.$list->photo6)}}" alt="" srcset="" width="300" height="300">
+                                <div class="input-group mt-2">
+                                    <input type="file" class="form-control" name="photo6" id="photo_Rent" placeholder="asd" onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])">
+                                </div>
+                                <a href="{{route('image_delete',['Parking_Spot',$list->id,'garages','photo6',$list->photo6])}}" class="btn btn-primary"><i class="fa-solid fa-trash-can"></i></a>
+                                @endif
+                                <label for="photo2_Rent" class="d-block"> Photo 7</label>
                             </div>
                         </div>
-                        <div class="col-12 mb-3 ">
-                            <label for="video_Rent" class="form-label me-2 fw-bold"> Youtube Link</label>
-                            <input type="text" class="form-control" name="video" value="{{$list->video}}" id="video_Rent" placeholder="  Youtube Link">
-                        </div>
-                        <button class="btn btn-primary w-25 mx-auto" type="submit">Update Rent Post</button>
                     </div>
+                    <button class="btn btn-primary w-25 mx-auto" type="submit">Update Rent Post</button>
                 </form>
                 @else
                 <form method="POST" action="{{ route('parking_spot_update',$list->id) }}" enctype="multipart/form-data">
@@ -201,7 +225,7 @@
                         <div class=" col-4 mb-3">
                             <label for="level_Rent" class="form-label me-2 fw-bold">Floor Level</label>
                             <select id="level_Rent" class="form-select" name="floor_level" required>
-                                <option value="" >Choose...</option>
+                                <option value="">Choose...</option>
                                 <option value="1" {{$list->floor_level == ="1" ? 'selected':''}}>1</option>
                                 <option value="2" {{$list->floor_level == ="2" ? 'selected':''}}>2</option>
                                 <option value="Under Ground" {{$list->floor_level == "Under Ground" ? 'selected':''}}>Under Ground</option>
@@ -210,7 +234,7 @@
                         <div class=" col-4 mb-3">
                             <label for="floor_height_Rent" class="form-label me-2 fw-bold">Floor Hieght</label>
                             <select id="" class="form-select" name="floor_height" required>
-                                <option value="" >Choose...</option>
+                                <option value="">Choose...</option>
                                 <option value="13" {{$list->floor_height == 13" ? 'selected':''}}>13</option>
                                 <option value="14" {{$list->floor_height == 14" ? 'selected':''}}>14</option>
                                 <option value="17" {{$list->floor_height == 17" ? 'selected':''}}>17</option>
@@ -220,7 +244,7 @@
                         <div class=" col-4 mb-3">
                             <label for="vehicle_type_Rent" class="form-label me-2 fw-bold">Vehicle type</label>
                             <select id="vehicle_type_Rent" class="form-select" name="vehicle_type" required>
-                                <option value="" >Choose...</option>
+                                <option value="">Choose...</option>
                                 <option value="Truck" {{$list->vehicle_type == "Truck" ? 'selected':''}}>Truck</option>
                                 <option value="Motor bike" {{$list->vehicle_type == "Motor bike" ? 'selected':''}}>Motor bike</option>
                                 <option value="Pickup" {{$list->vehicle_type == "Pickup" ? 'selected':''}}>Pickup</option>

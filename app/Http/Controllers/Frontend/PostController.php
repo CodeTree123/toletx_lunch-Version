@@ -3115,6 +3115,26 @@ class PostController extends Controller
 
 
     //post delete method
+    function image_delete($model,$id,$path,$image_col,$image_name)
+    {
+        // $t = strtolower($model);
+        // $tt = $t."s";
+        // $destination = 'public/uploads/'.$tt.'/'.$image_name;
+        // $image_Path = public_path("\uploads\\{$path}\\").$image_name;
+        // dd($t,$tt,$destination,$image_Path);
+        $modal_name="App\Models\\{$model}";
+        $list = $modal_name::find($id);
+        $image_Path = public_path("\uploads\\{$path}\\").$image_name;
+        if (File::exists($image_Path)) {
+            File::delete($image_Path);
+        } 
+        $list->update([
+            $image_col=> null
+        ]);
+        return back();
+    }
+
+
     function picnic_delete($id)
     {
         $list = Picnic_Spot::findOrFail($id)->delete();

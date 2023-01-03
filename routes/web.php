@@ -219,6 +219,7 @@ Route::post('/flat/update/{id}', [UpdateController::class, 'flat_update'])->name
 
 
 //delete post routes
+Route::get('/{model}/{id}/{path}/{image_col}/{image_name}/delete',[PostController::class, 'image_delete'])->name('image_delete');
 Route::get('/exibutioncenter/delete/{id}', [PostController::class, 'exibution_center_delete'])->name('exibution_center_delete');
 Route::get('/playground/delete/{id}', [PostController::class, 'playground_delete'])->name('playground_delete');
 Route::get('/rooftop/delete/{id}', [PostController::class, 'rooftop_delete'])->name('rooftop_delete');
